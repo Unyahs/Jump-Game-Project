@@ -1,0 +1,143 @@
+[gd_scene load_steps=6 format=3 uid="uid://x13shm3w0p6a"]
+
+[ext_resource type="PackedScene" uid="uid://rx6dwt0bg15b" path="res://Levels/Template.tscn" id="1_wymax"]
+[ext_resource type="Texture2D" uid="uid://dt6m7eq5rbxqg" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="2_bqha1"]
+[ext_resource type="PackedScene" uid="uid://cdtbrn0nppyue" path="res://Scenes/Traps/spikes.tscn" id="3_34agd"]
+[ext_resource type="PackedScene" uid="uid://bf5gidvgbihpf" path="res://Scenes/Collectibles/strawberry.tscn" id="4_tnthp"]
+[ext_resource type="PackedScene" uid="uid://c1dggnic21tv5" path="res://Scenes/Traps/saw.tscn" id="5_3qi2p"]
+
+[node name="World" instance=ExtResource("1_wymax")]
+
+[node name="Background" parent="." index="0"]
+offset_right = 193.0
+offset_bottom = 346.0
+texture = ExtResource("2_bqha1")
+
+[node name="TileMap" parent="." index="1"]
+layer_0/tile_data = PackedInt32Array(589823, 0, 5, 524287, 0, 5, 458751, 0, 5, 393215, 0, 5, 327679, 0, 5, 262143, 0, 5, 196607, 0, 5, 131071, 0, 5, 65535, 0, 5, 655359, 0, 5, 720895, 0, 5, 786431, 0, 5, 851967, 0, 5, 917503, 0, 5, 983039, 0, 5, 1048575, 0, 5, 1048599, 131072, 5, -65536, 65536, 4, -65535, 65536, 4, -65534, 65536, 4, -65533, 65536, 4, -65532, 65536, 4, -65531, 65536, 4, -65530, 65536, 4, -65529, 65536, 4, -65528, 65536, 4, -65527, 65536, 4, -65526, 65536, 4, -65525, 65536, 4, -65524, 65536, 4, -65523, 65536, 4, -65522, 65536, 4, -65521, 65536, 4, -65520, 65536, 4, -65519, 65536, 4, -65518, 65536, 4, -65517, 65536, 4, -65516, 65536, 4, -65515, 65536, 4, -65514, 65536, 4, -65513, 131072, 4, -1, 0, 4, 1114111, 0, 5, 1179647, 0, 5, 1245183, 0, 5, 1310719, 0, 5, 1376255, 0, 5, 1441791, 0, 5, 1507327, 0, 5, 1572863, 0, 5, 1638399, 0, 5, 1703935, 0, 5, 1769471, 0, 5, 1835007, 0, 5, 1900543, 0, 5, 1966079, 0, 5, 2031615, 0, 5, 2097151, 0, 5, 2162687, 0, 5, 2228223, 0, 5, 2293759, 0, 5, 2359295, 0, 5, 2424831, 0, 5, 2490367, 0, 5, 2555903, 0, 5, 2621439, 0, 5, 2686975, 0, 5, 2752511, 0, 5, 2818047, 0, 6, 2752512, 65536, 6, 2752513, 65536, 6, 2752514, 65536, 6, 2752515, 65536, 6, 2752516, 65536, 6, 2752517, 65536, 6, 2752518, 65536, 6, 2752519, 65536, 6, 2752520, 65536, 6, 2752521, 65536, 6, 2752522, 65536, 6, 2752523, 65536, 6, 2752524, 65536, 6, 2752525, 65536, 6, 2752526, 65536, 6, 2752527, 65536, 6, 2752528, 65536, 6, 2752529, 65536, 6, 2752530, 65536, 6, 2752531, 65536, 6, 2752532, 65536, 6, 2752533, 65536, 6, 2752534, 65536, 6, 23, 131072, 5, 65559, 131072, 5, 131095, 131072, 5, 196631, 131072, 5, 262167, 131072, 5, 327703, 131072, 5, 393239, 131072, 5, 458775, 131072, 5, 524311, 131072, 5, 589847, 131072, 5, 655383, 131072, 5, 720919, 131072, 5, 786455, 131072, 5, 851991, 131072, 5, 917527, 131072, 5, 983063, 131072, 5, 1114135, 131072, 5, 1179671, 131072, 5, 1245207, 131072, 5, 1310743, 131072, 5, 1376279, 131072, 5, 1441815, 131072, 5, 1507351, 131072, 5, 1572887, 131072, 5, 1638423, 131072, 5, 1703959, 131072, 5, 1769495, 131072, 5, 1835031, 131072, 5, 1900567, 131072, 5, 1966103, 131072, 5, 2031639, 131072, 5, 2097175, 131072, 5, 2162711, 131072, 5, 2228247, 131072, 5, 2293783, 131072, 5, 2359319, 131072, 5, 2424855, 131072, 5, 2490391, 131072, 5, 2555927, 131072, 5, 2621463, 131072, 5, 2686999, 131072, 5, 2752535, 131072, 6, 2359299, 1, 0, 1769482, 1, 0, 1179650, 1, 0, 655365, 1, 0, 851985, 1, 0, 2490386, 1, 0, 1441809, 1, 0, 393227, 1, 0, 196610, 1, 0)
+
+[node name="CharacterBody2D" parent="." index="2"]
+position = Vector2(32, 35)
+
+[node name="Strawberry" parent="Collectibles" index="0" instance=ExtResource("4_tnthp")]
+position = Vector2(11, 340)
+
+[node name="Strawberry2" parent="Collectibles" index="1" instance=ExtResource("4_tnthp")]
+position = Vector2(97, 341)
+
+[node name="Strawberry3" parent="Collectibles" index="2" instance=ExtResource("4_tnthp")]
+position = Vector2(180, 340)
+
+[node name="Strawberry4" parent="Collectibles" index="3" instance=ExtResource("4_tnthp")]
+position = Vector2(34, 294)
+
+[node name="Strawberry5" parent="Collectibles" index="4" instance=ExtResource("4_tnthp")]
+position = Vector2(153, 310)
+
+[node name="Strawberry6" parent="Collectibles" index="5" instance=ExtResource("4_tnthp")]
+position = Vector2(93, 215)
+
+[node name="Strawberry7" parent="Collectibles" index="6" instance=ExtResource("4_tnthp")]
+position = Vector2(27, 148)
+
+[node name="Strawberry8" parent="Collectibles" index="7" instance=ExtResource("4_tnthp")]
+position = Vector2(50, 81)
+
+[node name="Strawberry9" parent="Collectibles" index="8" instance=ExtResource("4_tnthp")]
+position = Vector2(99, 50)
+
+[node name="Strawberry10" parent="Collectibles" index="9" instance=ExtResource("4_tnthp")]
+position = Vector2(64, 172)
+
+[node name="Strawberry11" parent="Collectibles" index="10" instance=ExtResource("4_tnthp")]
+position = Vector2(111, 161)
+
+[node name="Strawberry12" parent="Collectibles" index="11" instance=ExtResource("4_tnthp")]
+position = Vector2(82, 122)
+
+[node name="Strawberry13" parent="Collectibles" index="12" instance=ExtResource("4_tnthp")]
+position = Vector2(36, 241)
+
+[node name="Strawberry14" parent="Collectibles" index="13" instance=ExtResource("4_tnthp")]
+position = Vector2(97, 279)
+
+[node name="Strawberry15" parent="Collectibles" index="14" instance=ExtResource("4_tnthp")]
+position = Vector2(185, 268)
+
+[node name="Strawberry16" parent="Collectibles" index="15" instance=ExtResource("4_tnthp")]
+position = Vector2(11, 263)
+
+[node name="Strawberry17" parent="Collectibles" index="16" instance=ExtResource("4_tnthp")]
+position = Vector2(147, 169)
+
+[node name="Strawberry18" parent="Collectibles" index="17" instance=ExtResource("4_tnthp")]
+position = Vector2(149, 99)
+
+[node name="Strawberry19" parent="Collectibles" index="18" instance=ExtResource("4_tnthp")]
+position = Vector2(163, 45)
+
+[node name="Spikes2" parent="Hazards" index="0" instance=ExtResource("3_34agd")]
+position = Vector2(17, 344)
+
+[node name="Spikes3" parent="Hazards" index="1" instance=ExtResource("3_34agd")]
+position = Vector2(26, 344)
+
+[node name="Spikes4" parent="Hazards" index="2" instance=ExtResource("3_34agd")]
+position = Vector2(35, 344)
+
+[node name="Spikes5" parent="Hazards" index="3" instance=ExtResource("3_34agd")]
+position = Vector2(44, 344)
+
+[node name="Spikes6" parent="Hazards" index="4" instance=ExtResource("3_34agd")]
+position = Vector2(53, 344)
+
+[node name="Spikes7" parent="Hazards" index="5" instance=ExtResource("3_34agd")]
+position = Vector2(62, 344)
+
+[node name="Spikes8" parent="Hazards" index="6" instance=ExtResource("3_34agd")]
+position = Vector2(71, 344)
+
+[node name="Spikes9" parent="Hazards" index="7" instance=ExtResource("3_34agd")]
+position = Vector2(80, 344)
+
+[node name="Spikes12" parent="Hazards" index="8" instance=ExtResource("3_34agd")]
+position = Vector2(107, 344)
+
+[node name="Spikes13" parent="Hazards" index="9" instance=ExtResource("3_34agd")]
+position = Vector2(116, 344)
+
+[node name="Spikes14" parent="Hazards" index="10" instance=ExtResource("3_34agd")]
+position = Vector2(125, 344)
+
+[node name="Spikes15" parent="Hazards" index="11" instance=ExtResource("3_34agd")]
+position = Vector2(134, 344)
+
+[node name="Spikes16" parent="Hazards" index="12" instance=ExtResource("3_34agd")]
+position = Vector2(143, 344)
+
+[node name="Spikes17" parent="Hazards" index="13" instance=ExtResource("3_34agd")]
+position = Vector2(152, 344)
+
+[node name="Spikes18" parent="Hazards" index="14" instance=ExtResource("3_34agd")]
+position = Vector2(162, 344)
+
+[node name="Saw" parent="Hazards" index="15" instance=ExtResource("5_3qi2p")]
+position = Vector2(50, 209)
+
+[node name="Saw2" parent="Hazards" index="16" instance=ExtResource("5_3qi2p")]
+position = Vector2(157, 250)
+
+[node name="Saw3" parent="Hazards" index="17" instance=ExtResource("5_3qi2p")]
+position = Vector2(121, 109)
+
+[node name="Saw4" parent="Hazards" index="18" instance=ExtResource("5_3qi2p")]
+position = Vector2(143, 48)
+
+[node name="Saw5" parent="Hazards" index="19" instance=ExtResource("5_3qi2p")]
+position = Vector2(71, 325)
+
+[node name="Saw6" parent="Hazards" index="20" instance=ExtResource("5_3qi2p")]
+position = Vector2(146, 331)
+
+[node name="StartIn" parent="CanvasLayer" index="1"]
+visible = false

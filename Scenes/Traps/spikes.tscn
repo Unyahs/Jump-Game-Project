@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdtbrn0nppyue"]
+
+[ext_resource type="Texture2D" uid="uid://bonnq86tn4rgo" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_fqql6"]
+[ext_resource type="PackedScene" uid="uid://c16p4x2yqc3su" path="res://Scenes/Traps/hazard_area.tscn" id="2_ybk00"]
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -5)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_fqql6")
+
+[node name="HazardArea" parent="." instance=ExtResource("2_ybk00")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
+polygon = PackedVector2Array(0, 0, 2, -4, 4, -1, 5, -1, 7, -4, 9, -1, 9, 0)

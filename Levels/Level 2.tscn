@@ -1,0 +1,208 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsc3wekis515f"]
+
+[ext_resource type="PackedScene" uid="uid://rx6dwt0bg15b" path="res://Levels/Template.tscn" id="1_2yj00"]
+[ext_resource type="Texture2D" uid="uid://delocj7ysof1e" path="res://Pixel Adventure 1/Free/Background/Green.png" id="2_7n6yh"]
+[ext_resource type="PackedScene" uid="uid://ch6fl2ndbqigd" path="res://Levels/Level 3.tscn" id="2_8orgu"]
+[ext_resource type="PackedScene" uid="uid://bf5gidvgbihpf" path="res://Scenes/Collectibles/strawberry.tscn" id="3_4v62o"]
+[ext_resource type="PackedScene" uid="uid://grajpqf543uw" path="res://Scenes/Traps/moving_platform.tscn" id="3_5ukot"]
+[ext_resource type="PackedScene" uid="uid://cdtbrn0nppyue" path="res://Scenes/Traps/spikes.tscn" id="3_ehm1s"]
+
+[sub_resource type="Curve2D" id="Curve2D_42ldu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 12, -3, 0, 0, 0, 0, 58, -29, 0, 0, 0, 0, 23, -60, 0, 0, 0, 0, 90, -61)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_s7e8d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, -2, 0, 0, 0, 0, 65, 12, 0, 0, 0, 0, 39, 41, 0, 0, 0, 0, -8, 27)
+}
+point_count = 4
+
+[node name="World" instance=ExtResource("1_2yj00")]
+next_level = ExtResource("2_8orgu")
+
+[node name="Background" parent="." index="0"]
+offset_right = 313.0
+offset_bottom = 177.0
+texture = ExtResource("2_7n6yh")
+
+[node name="TileMap" parent="." index="1"]
+layer_0/tile_data = PackedInt32Array(589823, 0, 5, 524287, 0, 5, 458751, 0, 5, 393215, 0, 5, 327679, 0, 5, 262143, 0, 5, 196607, 0, 5, 131071, 0, 5, 65535, 0, 5, 655359, 0, 5, 720895, 0, 5, 786431, 0, 5, 851967, 0, 5, 917503, 0, 5, 983039, 0, 5, 1048575, 0, 5, -65536, 65536, 4, -65535, 65536, 4, -65534, 65536, 4, -65533, 65536, 4, -65532, 65536, 4, -65531, 65536, 4, -65530, 65536, 4, -65529, 65536, 4, -65528, 65536, 4, -65527, 65536, 4, -65526, 65536, 4, -65525, 65536, 4, -65524, 65536, 4, -65523, 65536, 4, -65522, 65536, 4, -65521, 65536, 4, -65520, 65536, 4, -65519, 65536, 4, -65518, 65536, 4, -65517, 65536, 4, -65516, 65536, 4, -65515, 65536, 4, -65514, 65536, 4, -65513, 65536, 4, -65512, 65536, 4, -65511, 65536, 4, -65510, 65536, 4, -65509, 65536, 4, -65508, 65536, 4, -1, 0, 4, 1114111, 0, 5, -65507, 65536, 4, 720898, 1, 0, 983044, 1, 0, 917515, 1, 0, -65506, 65536, 4, -65505, 65536, 4, -65504, 65536, 4, -65503, 65536, 4, -65502, 65536, 4, -65501, 65536, 4, -65500, 65536, 4, -65499, 65536, 4, 1376256, 65536, 6, 1376257, 65536, 6, 1376258, 65536, 6, 1376259, 65536, 6, 1376260, 65536, 6, 1376261, 65536, 6, 1376262, 65536, 6, 1376263, 65536, 6, 1376264, 65536, 6, 1376265, 65536, 6, 1376266, 65536, 6, 1376267, 65536, 6, 1376268, 65536, 6, 1376269, 65536, 6, 1376270, 65536, 6, 1376271, 65536, 6, 1376272, 65536, 6, 1376273, 65536, 6, 1376274, 65536, 6, 1376275, 65536, 6, 1376276, 65536, 6, 1376277, 65536, 6, 1376278, 65536, 6, 1376279, 65536, 6, 1376280, 65536, 6, 1376281, 65536, 6, 1376282, 65536, 6, 1376283, 65536, 6, 1376284, 65536, 6, 1376285, 65536, 6, 1376286, 65536, 6, 1376287, 65536, 6, 1376288, 65536, 6, 1376289, 65536, 6, 1376290, 65536, 6, 1376291, 65536, 6, 1376292, 65536, 6, 1376293, 65536, 6, 38, 131072, 5, 65574, 131072, 5, 131110, 131072, 5, 196646, 131072, 5, 262182, 131072, 5, 327718, 131072, 5, 393254, 131072, 5, 458790, 131072, 5, 524326, 131072, 5, 589862, 131072, 5, 655398, 131072, 5, 720934, 131072, 5, 786470, 131072, 5, 852006, 131072, 5, 917542, 131072, 5, 983078, 131072, 5, 1048614, 131072, 5, 1114150, 131072, 5, 1179686, 131072, 5, 1245222, 131072, 5, 1310758, 131072, 5, 1179647, 0, 5, 1245183, 0, 5, 1310719, 0, 5, 1376255, 0, 5, 1441791, 0, 6, -65498, 131072, 4, 1376294, 131072, 6, 196610, 1, 0, 262148, 1, 0, 720912, 1, 0, 1114123, 1, 0, 1114125, 1, 0, 1114128, 1, 0, 1114139, 1, 0, 983061, 1, 0, 393241, 1, 0, 1114113, 1, 0, 1179681, 1, 0, 655382, 1, 0, 196642, 1, 0, 196635, 1, 0, 524324, 1, 0)
+
+[node name="CharacterBody2D" parent="." index="2"]
+position = Vector2(30, 32)
+
+[node name="Spikes" parent="Hazards" index="0" instance=ExtResource("3_ehm1s")]
+position = Vector2(8, 176)
+
+[node name="Spikes2" parent="Hazards" index="1" instance=ExtResource("3_ehm1s")]
+position = Vector2(17, 176)
+
+[node name="Spikes3" parent="Hazards" index="2" instance=ExtResource("3_ehm1s")]
+position = Vector2(26, 176)
+
+[node name="Spikes4" parent="Hazards" index="3" instance=ExtResource("3_ehm1s")]
+position = Vector2(35, 176)
+
+[node name="Spikes5" parent="Hazards" index="4" instance=ExtResource("3_ehm1s")]
+position = Vector2(44, 176)
+
+[node name="Spikes6" parent="Hazards" index="5" instance=ExtResource("3_ehm1s")]
+position = Vector2(53, 176)
+
+[node name="Spikes7" parent="Hazards" index="6" instance=ExtResource("3_ehm1s")]
+position = Vector2(62, 176)
+
+[node name="Spikes8" parent="Hazards" index="7" instance=ExtResource("3_ehm1s")]
+position = Vector2(71, 176)
+
+[node name="Spikes9" parent="Hazards" index="8" instance=ExtResource("3_ehm1s")]
+position = Vector2(80, 176)
+
+[node name="Spikes10" parent="Hazards" index="9" instance=ExtResource("3_ehm1s")]
+position = Vector2(89, 176)
+
+[node name="Spikes11" parent="Hazards" index="10" instance=ExtResource("3_ehm1s")]
+position = Vector2(98, 176)
+
+[node name="Spikes12" parent="Hazards" index="11" instance=ExtResource("3_ehm1s")]
+position = Vector2(107, 176)
+
+[node name="Spikes13" parent="Hazards" index="12" instance=ExtResource("3_ehm1s")]
+position = Vector2(116, 176)
+
+[node name="Spikes14" parent="Hazards" index="13" instance=ExtResource("3_ehm1s")]
+position = Vector2(125, 176)
+
+[node name="Spikes15" parent="Hazards" index="14" instance=ExtResource("3_ehm1s")]
+position = Vector2(134, 176)
+
+[node name="Spikes16" parent="Hazards" index="15" instance=ExtResource("3_ehm1s")]
+position = Vector2(143, 176)
+
+[node name="Spikes17" parent="Hazards" index="16" instance=ExtResource("3_ehm1s")]
+position = Vector2(152, 176)
+
+[node name="Spikes18" parent="Hazards" index="17" instance=ExtResource("3_ehm1s")]
+position = Vector2(161, 176)
+
+[node name="Spikes19" parent="Hazards" index="18" instance=ExtResource("3_ehm1s")]
+position = Vector2(170, 176)
+
+[node name="Spikes20" parent="Hazards" index="19" instance=ExtResource("3_ehm1s")]
+position = Vector2(179, 176)
+
+[node name="Spikes21" parent="Hazards" index="20" instance=ExtResource("3_ehm1s")]
+position = Vector2(188, 176)
+
+[node name="Spikes22" parent="Hazards" index="21" instance=ExtResource("3_ehm1s")]
+position = Vector2(197, 176)
+
+[node name="Spikes23" parent="Hazards" index="22" instance=ExtResource("3_ehm1s")]
+position = Vector2(206, 176)
+
+[node name="Spikes24" parent="Hazards" index="23" instance=ExtResource("3_ehm1s")]
+position = Vector2(215, 176)
+
+[node name="Spikes25" parent="Hazards" index="24" instance=ExtResource("3_ehm1s")]
+position = Vector2(224, 176)
+
+[node name="Spikes26" parent="Hazards" index="25" instance=ExtResource("3_ehm1s")]
+position = Vector2(233, 176)
+
+[node name="Spikes27" parent="Hazards" index="26" instance=ExtResource("3_ehm1s")]
+position = Vector2(242, 176)
+
+[node name="Spikes28" parent="Hazards" index="27" instance=ExtResource("3_ehm1s")]
+position = Vector2(252, 176)
+
+[node name="Spikes29" parent="Hazards" index="28" instance=ExtResource("3_ehm1s")]
+position = Vector2(261, 176)
+
+[node name="Spikes30" parent="Hazards" index="29" instance=ExtResource("3_ehm1s")]
+position = Vector2(270, 176)
+
+[node name="Spikes31" parent="Hazards" index="30" instance=ExtResource("3_ehm1s")]
+position = Vector2(279, 176)
+
+[node name="Spikes32" parent="Hazards" index="31" instance=ExtResource("3_ehm1s")]
+position = Vector2(288, 176)
+
+[node name="Spikes33" parent="Hazards" index="32" instance=ExtResource("3_ehm1s")]
+position = Vector2(297, 176)
+
+[node name="Spikes34" parent="Hazards" index="33" instance=ExtResource("3_ehm1s")]
+position = Vector2(303, 176)
+
+[node name="moving platform" parent="Hazards" index="34" instance=ExtResource("3_5ukot")]
+position = Vector2(63, 102)
+curve = SubResource("Curve2D_42ldu")
+loop = false
+speed = 1.0
+
+[node name="moving platform2" parent="Hazards" index="35" instance=ExtResource("3_5ukot")]
+position = Vector2(224, 90)
+curve = SubResource("Curve2D_s7e8d")
+loop = false
+speed = 1.0
+
+[node name="StartIn" parent="CanvasLayer" index="1"]
+visible = false
+
+[node name="Strawberry" parent="." index="7" instance=ExtResource("3_4v62o")]
+position = Vector2(23, 128)
+
+[node name="Strawberry2" parent="." index="8" instance=ExtResource("3_4v62o")]
+position = Vector2(59, 113)
+
+[node name="Strawberry3" parent="." index="9" instance=ExtResource("3_4v62o")]
+position = Vector2(15, 89)
+
+[node name="Strawberry4" parent="." index="10" instance=ExtResource("3_4v62o")]
+position = Vector2(16, 13)
+
+[node name="Strawberry5" parent="." index="11" instance=ExtResource("3_4v62o")]
+position = Vector2(61, 24)
+
+[node name="Strawberry6" parent="." index="12" instance=ExtResource("3_4v62o")]
+position = Vector2(49, 78)
+
+[node name="Strawberry7" parent="." index="13" instance=ExtResource("3_4v62o")]
+position = Vector2(124, 59)
+
+[node name="Strawberry8" parent="." index="14" instance=ExtResource("3_4v62o")]
+position = Vector2(92, 26)
+
+[node name="Strawberry9" parent="." index="15" instance=ExtResource("3_4v62o")]
+position = Vector2(153, 24)
+
+[node name="Strawberry10" parent="." index="16" instance=ExtResource("3_4v62o")]
+position = Vector2(167, 83)
+
+[node name="Strawberry11" parent="." index="17" instance=ExtResource("3_4v62o")]
+position = Vector2(110, 136)
+
+[node name="Strawberry12" parent="." index="18" instance=ExtResource("3_4v62o")]
+position = Vector2(215, 102)
+
+[node name="Strawberry13" parent="." index="19" instance=ExtResource("3_4v62o")]
+position = Vector2(254, 67)
+
+[node name="Strawberry14" parent="." index="20" instance=ExtResource("3_4v62o")]
+position = Vector2(235, 22)
+
+[node name="Strawberry15" parent="." index="21" instance=ExtResource("3_4v62o")]
+position = Vector2(271, 144)
+
+[node name="Strawberry16" parent="." index="22" instance=ExtResource("3_4v62o")]
+position = Vector2(183, 118)
+
+[node name="Strawberry17" parent="." index="23" instance=ExtResource("3_4v62o")]
+position = Vector2(229, 138)
+
+[node name="Strawberry18" parent="." index="24" instance=ExtResource("3_4v62o")]
+position = Vector2(297, 64)
+
+[node name="Strawberry19" parent="." index="25" instance=ExtResource("3_4v62o")]
+position = Vector2(282, 24)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxos1v8a23sl7"]
+
+[ext_resource type="PackedScene" uid="uid://cmst81rlwbpo" path="res://Levels/Template.tscn" id="1_2yj00"]
+[ext_resource type="Texture2D" uid="uid://dt6m7eq5rbxqg" path="res://Pixel Adventure 1/Free/Background/Blue.png" id="2_dyf63"]
+[ext_resource type="PackedScene" uid="uid://bf5gidvgbihpf" path="res://Scenes/Collectibles/strawberry.tscn" id="3_65v1d"]
+
+[node name="World" instance=ExtResource("1_2yj00")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_dyf63")
+
+[node name="Strawberry" parent="Collectibles" index="0" instance=ExtResource("3_65v1d")]
+position = Vector2(223, 114)
+
+[node name="Strawberry2" parent="Collectibles" index="1" instance=ExtResource("3_65v1d")]
+position = Vector2(188, 130)

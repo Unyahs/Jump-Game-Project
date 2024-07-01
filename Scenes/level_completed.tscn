@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnmjahy0xf8q8"]
+
+[ext_resource type="Texture2D" uid="uid://b3caccsri07m" path="res://Pixel Adventure 1/Free/Menu/Buttons/Restart.png" id="1_bcbqy"]
+[ext_resource type="Script" path="res://Scenes/level_completed.gd" id="1_lrudy"]
+[ext_resource type="Texture2D" uid="uid://b5nx3kchsltjd" path="res://Pixel Adventure 1/Free/Menu/Buttons/Next.png" id="2_v0x7m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlwc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw0mm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lt41"]
+
+[node name="LevelCompleted" type="ColorRect"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.00784314, 0.00784314, 0.439216)
+script = ExtResource("1_lrudy")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Level Completed!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RestartBtn" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_qlwc7")
+icon = ExtResource("1_bcbqy")
+flat = true
+
+[node name="NextLevelBtn" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_mw0mm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4lt41")
+icon = ExtResource("2_v0x7m")
+flat = true
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RestartBtn" to="." method="_on_restart_btn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/NextLevelBtn" to="." method="_on_next_level_btn_pressed"]

@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://dxag7fjhdvfxl"]
+
+[ext_resource type="Texture2D" uid="uid://crgsx7p73okfr" path="res://Pixel Adventure 1/Free/Items/Checkpoints/End/End (Pressed) (64x64).png" id="1_3s571"]
+
+[sub_resource type="GDScript" id="GDScript_p4soa"]
+script/source = "extends Area2D
+
+
+
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha3p5"]
+atlas = ExtResource("1_3s571")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuhqs"]
+atlas = ExtResource("1_3s571")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygd8d"]
+atlas = ExtResource("1_3s571")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_antlm"]
+atlas = ExtResource("1_3s571")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjvep"]
+atlas = ExtResource("1_3s571")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7x3s"]
+atlas = ExtResource("1_3s571")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg8mj"]
+atlas = ExtResource("1_3s571")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dppds"]
+atlas = ExtResource("1_3s571")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qg2tw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha3p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuhqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygd8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_antlm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjvep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7x3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg8mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dppds")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ok560"]
+size = Vector2(6, 6.5)
+
+[node name="End Point" type="Area2D"]
+collision_layer = 0
+script = SubResource("GDScript_p4soa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6.125, 2.41509)
+scale = Vector2(0.160156, 0.169222)
+sprite_frames = SubResource("SpriteFrames_qg2tw")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 4.75)
+shape = SubResource("RectangleShape2D_ok560")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

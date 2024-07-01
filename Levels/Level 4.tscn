@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2agb5x6llb4u"]
+
+[ext_resource type="PackedScene" uid="uid://rx6dwt0bg15b" path="res://Levels/Template.tscn" id="1_yvb1l"]
+[ext_resource type="Texture2D" uid="uid://pggw5i2p4s2e" path="res://Pixel Adventure 1/Free/Background/Yellow.png" id="2_vj5e8"]
+[ext_resource type="PackedScene" uid="uid://x13shm3w0p6a" path="res://Levels/Level 5.tscn" id="2_yojpy"]
+[ext_resource type="PackedScene" uid="uid://bf5gidvgbihpf" path="res://Scenes/Collectibles/strawberry.tscn" id="3_ru3ud"]
+[ext_resource type="PackedScene" uid="uid://cdtbrn0nppyue" path="res://Scenes/Traps/spikes.tscn" id="4_i7b03"]
+
+[node name="World" instance=ExtResource("1_yvb1l")]
+next_level = ExtResource("2_yojpy")
+
+[node name="Background" parent="." index="0"]
+offset_right = 321.0
+offset_bottom = 160.0
+texture = ExtResource("2_vj5e8")
+
+[node name="TileMap" parent="." index="1"]
+layer_0/tile_data = PackedInt32Array(589823, 0, 5, 524287, 0, 5, 458751, 0, 5, 393215, 0, 5, 327679, 0, 5, 262143, 0, 5, 196607, 0, 5, 131071, 0, 5, 65535, 0, 5, 655359, 0, 5, 720895, 0, 5, 786431, 0, 5, 851967, 0, 5, 917503, 0, 5, 983039, 0, 5, 1048575, 0, 5, 1048596, 1114112, 1, 1048597, 393216, 4, 1048598, 458752, 4, 1048599, 524288, 4, 589853, 1114112, 1, -65536, 65536, 4, -65535, 65536, 4, -65534, 65536, 4, -65533, 65536, 4, -65532, 65536, 4, -65531, 65536, 4, -65530, 65536, 4, -65529, 65536, 4, -65528, 65536, 4, -65527, 65536, 4, -65526, 65536, 4, -65525, 65536, 4, -65524, 65536, 4, -65523, 65536, 4, -65522, 65536, 4, -65521, 65536, 4, -65520, 65536, 4, -65519, 65536, 4, -65518, 65536, 4, -65517, 65536, 4, -65516, 65536, 4, -65515, 65536, 4, -65514, 65536, 4, -65513, 65536, 4, -65512, 65536, 4, -65511, 65536, 4, -65510, 65536, 4, -65509, 65536, 4, -65508, 65536, 4, -1, 0, 4, 1114111, 0, 5, -65507, 65536, 4, 917509, 1114112, 1, 917510, 393216, 5, 851974, 393216, 4, 851975, 458752, 4, 917511, 458752, 5, 917512, 524288, 5, 851976, 524288, 4, 1245184, 65536, 6, 1245185, 65536, 6, 1245186, 65536, 6, 1245187, 65536, 6, 1245188, 65536, 6, 1245189, 65536, 6, 1245190, 65536, 6, 1245191, 65536, 6, 1245192, 65536, 6, 1245193, 65536, 6, 1245194, 65536, 6, 1245195, 65536, 6, 1245196, 65536, 6, 1245197, 65536, 6, 1245198, 65536, 6, 1245199, 65536, 6, 1245200, 65536, 6, 1245201, 65536, 6, 1245202, 65536, 6, 1245203, 65536, 6, 1245204, 65536, 6, 1245205, 65536, 6, 1245206, 65536, 6, 1245207, 65536, 6, 1245208, 65536, 6, 1245209, 65536, 6, 1245210, 65536, 6, 1245211, 65536, 6, 1245212, 65536, 6, 1245213, 65536, 6, 1245214, 65536, 6, 1245215, 65536, 6, 1245216, 65536, 6, 1245217, 65536, 6, 1245218, 65536, 6, 1245219, 65536, 6, 1245220, 65536, 6, 1245221, 65536, 6, 1245222, 65536, 6, 39, 131072, 5, 65575, 131072, 5, 131111, 131072, 5, 196647, 131072, 5, 262183, 131072, 5, 327719, 131072, 5, 393255, 131072, 5, 458791, 131072, 5, 524327, 131072, 5, 589863, 131072, 5, 655399, 131072, 5, 720935, 131072, 5, 786471, 131072, 5, 852007, 131072, 5, 917543, 131072, 5, 983079, 131072, 5, 1048615, 131072, 5, 1114151, 131072, 5, 1179687, 131072, 5, -65506, 65536, 4, -65505, 65536, 4, -65504, 65536, 4, -65503, 65536, 4, -65502, 65536, 4, -65501, 65536, 4, -65500, 65536, 4, -65499, 65536, 4, -65498, 65536, 4, 1179647, 0, 5, 1245183, 0, 5, 1310719, 0, 6, 1245223, 131072, 6, -65497, 131072, 4, 720911, 393216, 4, 786447, 393216, 5, 720912, 458752, 4, 786448, 458752, 5, 720913, 524288, 4, 786449, 524288, 5, 1114133, 393216, 5, 1114134, 458752, 5, 1114135, 524288, 5, 524318, 393216, 4, 589854, 393216, 5, 524319, 458752, 4, 589855, 458752, 5, 524320, 524288, 4, 589856, 524288, 5, 327682, 393216, 4, 393218, 393216, 5, 327683, 458752, 4, 393219, 458752, 5, 327684, 524288, 4, 393220, 524288, 5, 655369, 1, 0, 393229, 1, 0, 720920, 1, 0, 1114124, 1, 0, 1048606, 1, 0, 262166, 1, 0, 262179, 1, 0, 852003, 1, 0, 1114112, 393216, 4, 1179648, 393216, 5, 1114113, 458752, 4, 1179649, 458752, 5, 1114114, 524288, 4, 1179650, 524288, 5, 1114148, 393216, 4, 1179684, 393216, 5, 1114149, 458752, 4, 1179685, 458752, 5, 1114150, 524288, 4, 1179686, 524288, 5, 393221, 1245184, 1, 786446, 1114112, 1, 720914, 1245184, 1, 524321, 1245184, 1, 1114136, 1245184, 1, 1114115, 1179648, 1, 1114116, 1245184, 1, 1114146, 1114112, 1, 1114147, 1179648, 1)
+
+[node name="CharacterBody2D" parent="." index="2"]
+position = Vector2(47, 49)
+
+[node name="Strawberry" parent="Collectibles" index="0" instance=ExtResource("3_ru3ud")]
+position = Vector2(24, 139)
+
+[node name="Strawberry2" parent="Collectibles" index="1" instance=ExtResource("3_ru3ud")]
+position = Vector2(41, 155)
+
+[node name="Strawberry3" parent="Collectibles" index="2" instance=ExtResource("3_ru3ud")]
+position = Vector2(288, 153)
+
+[node name="Strawberry4" parent="Collectibles" index="3" instance=ExtResource("3_ru3ud")]
+position = Vector2(172, 147)
+
+[node name="Strawberry5" parent="Collectibles" index="4" instance=ExtResource("3_ru3ud")]
+position = Vector2(65, 51)
+
+[node name="Strawberry6" parent="Collectibles" index="5" instance=ExtResource("3_ru3ud")]
+position = Vector2(59, 108)
+
+[node name="Strawberry7" parent="Collectibles" index="6" instance=ExtResource("3_ru3ud")]
+position = Vector2(150, 92)
+
+[node name="Strawberry8" parent="Collectibles" index="7" instance=ExtResource("3_ru3ud")]
+position = Vector2(83, 82)
+
+[node name="Strawberry9" parent="Collectibles" index="8" instance=ExtResource("3_ru3ud")]
+position = Vector2(117, 51)
+
+[node name="Strawberry10" parent="Collectibles" index="9" instance=ExtResource("3_ru3ud")]
+position = Vector2(157, 22)
+
+[node name="Strawberry11" parent="Collectibles" index="10" instance=ExtResource("3_ru3ud")]
+position = Vector2(191, 34)
+
+[node name="Strawberry12" parent="Collectibles" index="11" instance=ExtResource("3_ru3ud")]
+position = Vector2(205, 89)
+
+[node name="Strawberry13" parent="Collectibles" index="12" instance=ExtResource("3_ru3ud")]
+position = Vector2(115, 138)
+
+[node name="Strawberry14" parent="Collectibles" index="13" instance=ExtResource("3_ru3ud")]
+position = Vector2(174, 129)
+
+[node name="Strawberry15" parent="Collectibles" index="14" instance=ExtResource("3_ru3ud")]
+position = Vector2(254, 132)
+
+[node name="Strawberry16" parent="Collectibles" index="15" instance=ExtResource("3_ru3ud")]
+position = Vector2(297, 104)
+
+[node name="Strawberry17" parent="Collectibles" index="16" instance=ExtResource("3_ru3ud")]
+position = Vector2(289, 140)
+
+[node name="Strawberry18" parent="Collectibles" index="17" instance=ExtResource("3_ru3ud")]
+position = Vector2(293, 32)
+
+[node name="Strawberry19" parent="Collectibles" index="18" instance=ExtResource("3_ru3ud")]
+position = Vector2(267, 67)
+
+[node name="Strawberry20" parent="Collectibles" index="19" instance=ExtResource("3_ru3ud")]
+position = Vector2(228, 50)
+
+[node name="Strawberry21" parent="Collectibles" index="20" instance=ExtResource("3_ru3ud")]
+position = Vector2(213, 130)
+
+[node name="Spikes" parent="Hazards" index="0" instance=ExtResource("4_i7b03")]
+position = Vector2(71, 112)
+
+[node name="Spikes2" parent="Hazards" index="1" instance=ExtResource("4_i7b03")]
+position = Vector2(24, 48)
+
+[node name="Spikes3" parent="Hazards" index="2" instance=ExtResource("4_i7b03")]
+position = Vector2(129, 96)
+
+[node name="Spikes4" parent="Hazards" index="3" instance=ExtResource("4_i7b03")]
+position = Vector2(190, 136)
+
+[node name="Spikes5" parent="Hazards" index="4" instance=ExtResource("4_i7b03")]
+position = Vector2(59, 160)
+
+[node name="Spikes6" parent="Hazards" index="5" instance=ExtResource("4_i7b03")]
+position = Vector2(254, 160)
+
+[node name="Spikes7" parent="Hazards" index="6" instance=ExtResource("4_i7b03")]
+position = Vector2(8, 144)
+
+[node name="Spikes8" parent="Hazards" index="7" instance=ExtResource("4_i7b03")]
+position = Vector2(310, 144)
+
+[node name="Spikes9" parent="Hazards" index="8" instance=ExtResource("4_i7b03")]
+position = Vector2(249, 72)
+
+[node name="StartIn" parent="CanvasLayer" index="1"]
+visible = false
